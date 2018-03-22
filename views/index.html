@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timestamp API Microservice</title>
+    <meta name="description" content="Simple API made with Glitch!">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Timestamp API Microservice
+      </h1>
+      <p>
+          Submit an unix timestamp or a natural language date (example: March 21, 2016), and this service with return both the unix and natural timestamps.
+      </p>
+      <form>
+        <p class="attention">
+          Try it out!
+        </p>
+        <input type="text" placeholder="March 21, 2016">
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
