@@ -16,22 +16,25 @@ body {
   max-width: 960px;
   min-height: 100%;
   margin: 0 auto;
-  padding: 0 3%;
 }
 
-.container h1{
+header, section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header h1{
   margin: 0;
   padding-top: 2em;
-}
-
-.container p {
-  margin: 1em 0 0.2em;
-  width: 80%;
 }
 
 .attention {
   font-weight: bold;
   font-size: 1.3em;
+}
+
+form {
+   margin-top: 2em; 
 }
 
 input, button {
