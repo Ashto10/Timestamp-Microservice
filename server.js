@@ -12,12 +12,13 @@ app.get("/", (request, response) => {
   response.sendFile(__dirname + '/views/index.html')
 })
 
-app.get("/*", function (req,res) {
-  var stringToCheck = decodeURI(req.url.substring(1));
-  var date = new Date(stringToCheck);
+app.get("/:date", function (req,res) {
+  var str = req.params.date;
+  var date = new Date(str);
+  
   // Check to see if natural
   if (isNaN(date)) {
-    date = new Date(Number(stringToCheck)*1000);
+    date = new Date(Number(str)*1000);
     if (isNaN(date)) {
       res.status(400).send({unix:null, natural:null});
       return;
@@ -31,6 +32,4 @@ app.get("/*", function (req,res) {
   res.status(200).send(response);
 });
 
-const listener = app.listen(process.env.PORT, () => {
-  console.log(`Your app is listening on port ${listener.address().port}`)
-})
+const listener = app.listen(process.env.PORT)
